@@ -4,11 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "cross-var ng build --prod --base-href https://java-fad-mo04.github.io/gestion-des-transports-groupe1-front/",
+    "build": "ng build --prod --base-href https://java-fad-mo04.github.io/gestion-des-transports-groupe1-front/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
-
   },
   "private": true,
   "dependencies": {
@@ -57,6 +56,6 @@
     "replace": "^0.3.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
-    "typescript": "~3.5.3"
+    "typescript": "^3.5.3"
   }
 }
