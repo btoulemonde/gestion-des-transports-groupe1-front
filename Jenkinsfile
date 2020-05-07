@@ -1,4 +1,4 @@
-pipeline {
+/*pipeline {
     agent any
     environment {
         GH_ORG = "java-fad-mo04"
@@ -34,4 +34,4 @@ pipeline {
             slackSend channel: '#jenkins_nantes', color: 'danger', message: "Oops ! ${env.JOB_NAME} commit ${env.GIT_COMMIT} (<${env.BUILD_URL}|Open>)"
         }
     }
-}
+}*/
