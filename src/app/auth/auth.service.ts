@@ -55,7 +55,7 @@ export class AuthService {
    */
   verifierAuthentification(): Observable<Collegue> {
     return this.collegueConnecteSub.getValue().estAnonyme() ?
-            this._http.get<Collegue>(`url${environment.apiAuthMe}`, {withCredentials: true})
+            this._http.get<Collegue>(`${environment.baseUrl}${environment.apiAuthMe}`, {withCredentials: true})
                   .pipe(
                     map(colServeur => new Collegue(colServeur)),
                     tap(col => this.collegueConnecteSub.next(col)),
@@ -81,7 +81,7 @@ export class AuthService {
       })
     };
 
-    return this._http.post(`url${environment.apiLogin}`, new HttpParams().set('username', email).set('password', mdp), config)
+    return this._http.post(`${environment.baseUrl}${environment.apiLogin}`, new HttpParams().set('username', email).set('password', mdp), config)
       .pipe(
         map(colServeur => new Collegue(colServeur)),
         tap(col => this.collegueConnecteSub.next(col) )
@@ -103,7 +103,7 @@ export class AuthService {
       })
     };
 
-    return this._http.post<Collegue>(`url${environment.apiLogout}`, null , config)
+    return this._http.post<Collegue>(`${environment.baseUrl}${environment.apiLogout}`, null , config)
       .pipe(
         tap(col => this.collegueConnecteSub.next(COLLEGUE_ANONYME))
       );

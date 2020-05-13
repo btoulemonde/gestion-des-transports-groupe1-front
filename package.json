@@ -7,7 +7,8 @@
     "build": "ng build --prod --base-href https://btoulemonde.github.io/gestion-des-transports-groupe1-front/",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prepare-prod": "node prepare-prod.js"
   },
   "private": true,
   "dependencies": {
